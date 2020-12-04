@@ -15,6 +15,9 @@ RSpec.describe 'Site Navigation' do
       expect(page).to have_link("Login with Google Oath")
     end
 
+    it "should see profile image" do
+
+    end
 
   end
 end
