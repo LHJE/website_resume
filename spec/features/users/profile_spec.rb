@@ -4,6 +4,7 @@ RSpec.describe "User Profile Path" do
   describe "As a registered user" do
     before :each do
       @user = User.create!(name: 'Morgan',  email: 'morgan@example.com', password: 'securepassword')
+      @admin = User.create!(name: 'Morgan',  email: 'pants@example.com', password: 'securepassword')
     end
 
     it "I can view my profile page" do
