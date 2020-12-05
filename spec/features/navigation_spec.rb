@@ -53,6 +53,16 @@ RSpec.describe 'Site Navigation' do
         expect(current_path).to eq('http://www.somelovemusic.net/')
       end
 
+      it 'the login page' do
+        visit login_path
+
+        within 'nav' do
+          click_link 'Log In'
+        end
+
+        expect(current_path).to eq(login_path)
+      end
+
       it 'the registraton page' do
         visit root_path
 
