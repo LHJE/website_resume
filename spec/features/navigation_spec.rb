@@ -109,6 +109,16 @@ RSpec.describe 'Site Navigation' do
 
         expect(current_path).to eq(music_path)
       end
+
+      it 'my radio show' do
+        visit root_path
+
+        within 'nav' do
+          click_link 'My Radio Show'
+        end
+
+        expect(current_path).to eq('/radio')
+      end
     end
   end
 end
