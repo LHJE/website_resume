@@ -167,6 +167,12 @@ RSpec.describe 'Site Navigation' do
 
         expect(page).to_not have_link('Log In')
       end
+
+      it 'the registration link' do
+        visit root_path
+
+        expect(page).to_not have_link('Register')
+      end
     end
   end
 end
