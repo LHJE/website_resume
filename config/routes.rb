@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get '/music', to: 'music#index'
 
+  get '/radio', to: 'radio#index'
+
   get '/registration', to: 'users#new', as: :registration
 
   get '/login', to: 'sessions#new'
