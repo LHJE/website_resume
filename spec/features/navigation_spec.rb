@@ -139,6 +139,16 @@ RSpec.describe 'Site Navigation' do
 
         expect(current_path).to eq('http://www.somelovemusic.net/')
       end
+
+      it 'the logout page' do
+        visit root_path
+
+        within 'nav' do
+          click_link 'Log Out'
+        end
+
+        expect(current_path).to eq(root_path)
+      end
     end
   end
 end
