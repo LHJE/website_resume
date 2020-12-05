@@ -39,8 +39,6 @@ RSpec.describe "User Profile Path" do
       expect(page).to have_content('Profile has been updated!')
       expect(page).to have_content(name)
       expect(page).to have_content(email)
-      expect(page).to have_content(address)
-      expect(page).to have_content("#{city} #{state} #{zip}")
     end
 
     it "I can update my password" do
