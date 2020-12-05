@@ -74,4 +74,19 @@ RSpec.describe 'Site Navigation' do
       end
     end
   end
+
+  describe 'As a User' do
+    before :each do
+      @user = User.create(name: 'Morgan', email: 'morgan@example.com', password: 'securepassword')
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+    end
+
+    it 'I see who I am logged in as' do
+      visit root_path
+
+      within 'nav' do
+        expect(page).to have_content("Logged in as #{@user.name}")
+      end
+    end
+  end
 end
