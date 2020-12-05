@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :users, only: [:create, :update]
   get '/profile', to: 'users#show'
   get '/profile/edit', to: 'users#edit'
+  get '/profile/edit_password', to: 'users#edit_password'
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#login'
