@@ -149,7 +149,7 @@ RSpec.describe 'Site Navigation' do
 
         expect(current_path).to eq(root_path)
       end
-      
+
       it 'my profile page' do
         visit root_path
 
@@ -158,6 +158,14 @@ RSpec.describe 'Site Navigation' do
         end
 
         expect(current_path).to eq(profile_path)
+      end
+    end
+
+    describe 'I do not see in my nav bar' do
+      it 'the login link' do
+        visit root_path
+
+        expect(page).to_not have_link('Log In')
       end
     end
   end
