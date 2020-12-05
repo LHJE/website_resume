@@ -32,6 +32,16 @@ RSpec.describe 'Site Navigation' do
 
         expect(current_path).to eq('/radio')
       end
+
+      it 'my dnd game' do
+        visit root_path
+
+        within 'nav' do
+          click_link 'A D&D Game I DM'
+        end
+
+        expect(current_path).to eq('/dnd')
+      end
     end
   end
 end
