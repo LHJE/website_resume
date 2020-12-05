@@ -42,6 +42,16 @@ RSpec.describe 'Site Navigation' do
 
         expect(current_path).to eq('/dnd')
       end
+
+      it 'the old blog' do
+        visit root_path
+
+        within 'nav' do
+          click_link 'My Old Blog'
+        end
+
+        expect(current_path).to eq('http://www.somelovemusic.net/')
+      end
     end
   end
 end
