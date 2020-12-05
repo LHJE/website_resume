@@ -88,5 +88,17 @@ RSpec.describe 'Site Navigation' do
         expect(page).to have_content("Logged in as #{@user.name}")
       end
     end
+
+    describe 'I see a nav bar where I can link to' do
+      it 'the welcome page' do
+        visit music_path
+
+        within 'nav' do
+          click_link 'Home'
+        end
+
+        expect(current_path).to eq(root_path)
+      end
+    end
   end
 end
