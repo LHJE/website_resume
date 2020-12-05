@@ -12,6 +12,16 @@ RSpec.describe 'Site Navigation' do
 
         expect(current_path).to eq(root_path)
       end
+      
+      it 'my music' do
+        visit root_path
+
+        within 'nav' do
+          click_link 'My Music'
+        end
+
+        expect(current_path).to eq(music_path)
+      end
     end
   end
 end
