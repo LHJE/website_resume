@@ -171,7 +171,7 @@ RSpec.describe 'Site Navigation' do
         visit root_path
 
         within 'nav' do
-          click_link 'Profile'
+          click_link @user.name
         end
 
         expect(current_path).to eq(profile_path)
