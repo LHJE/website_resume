@@ -16,9 +16,10 @@
       <%= link_to 'My Radio Show', '/radio' %>
       <%= link_to 'A D&D Game I DM', '/dnd' %>
       <%= link_to 'My Old Blog', 'http://www.somelovemusic.net/' %>
+      <%= link_to 'Log In', login_path unless current_user %>Q
       <%= link_to 'Register', registration_path unless current_user %>
-      <%= link_to 'Log In', login_path unless current_user %>
       <% if current_user %>
+        <p>Logged in as <%= link_to current_user.name, profile_path %></p>
         <%= link_to 'Log Out', logout_path %>
       <% end %>
     </nav>
