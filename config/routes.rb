@@ -5,10 +5,11 @@ Rails.application.routes.draw do
   get '/music', to: 'music#index'
 
   get '/radio', to: 'radio#index'
-  
+
   get '/dnd', to: 'dnd#index'
 
   get '/registration', to: 'users#new', as: :registration
+  resources :users, only: [:create]
 
   get '/login', to: 'sessions#new'
 end
