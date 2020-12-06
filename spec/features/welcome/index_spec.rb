@@ -7,8 +7,9 @@ RSpec.describe 'Welcome Page' do
       visit root_path
     end
 
-    it "can see welcome message" do
-      expect(page).to have_content("Hi there, my name is Luke, and I'm having a great day")
+    it "can see welcome page text" do
+      expect(page).to have_content("LUKE HUNTER JAMES-ERICKSON")
+      expect(page).to have_content("oh, hello there")
     end
   end
 end
