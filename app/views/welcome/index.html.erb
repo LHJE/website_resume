@@ -1,1 +1,47 @@
-Hi there, my name is Luke, and I'm having a great day
+<!DOCTYPE html>
+<!-- <meta charset="UTF-8"> -->
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey">
+
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center">
+  <h1><b>My Name is Luke</b></h1>
+  <% images = [1,2,3,4,5]%>
+  <% images.each do |image|  %>
+  <div class="mySlides w3-display-container pad-25-top">
+    <%= image_tag "profile/#{image}.jpg", alt: "picture #{image}/#{images.length}", id: "profile", style: "width:25%"%></a>
+  </div>
+  <% end %>
+  <p>and I'm having a great day</p>
+</header>
+
+
+
+
+Background doing an API call to get denver weather
+
+
+<script>
+// Automatic Slideshow - change image every 6 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 6000);
+}
+</script>
