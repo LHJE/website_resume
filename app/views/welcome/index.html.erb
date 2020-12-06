@@ -1,1 +1,84 @@
-Hi there, my name is Luke, and I'm having a great day
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey">
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32">
+  <h1><b>LUKE HUNTER JAMES-ERICKSON</b></h1>
+  <p>oh, hello there</p>
+  Background doing an API call to get denver weather
+</header>
+
+<!-- Grid -->
+<div class="w3-row">
+
+<!-- Description -->
+<div class="w3-col l8 s12">
+  <div class="w3-card-4 w3-margin w3-white">
+    <img src="/w3images/woods.jpg" alt="Nature" style="width:100%">
+    <div class="w3-container">
+      <h3><b>A LITTLE ABOUT ME</b></h3>
+      <h5>Just a little</h5>
+    </div>
+    <div class="w3-container">
+      <p>Here is where I will talk </p>
+    </div>
+  </div>
+  <hr>
+</div>
+
+<!-- Introduction menu -->
+<div class="w3-col l4">
+  <!-- About Card -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <% images = [1,2,3,4,5]%>
+    <% images.each do |image|  %>
+    <div class="mySlides w3-display-container pad-25-top">
+      <%= image_tag "profile/#{image}.jpg", alt: "picture #{image}/#{images.length}", id: "profile", style: "width:100%"%></a>
+    </div>
+    <% end %>
+    <div class="w3-container w3-white">
+      <h4><b>My Name is Luke</b></h4>
+      <p>and I'm having a great day</p>
+    </div>
+  </div><hr>
+
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+</body>
+
+<script>
+// Automatic Slideshow - change image every 6 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 6000);
+}
+</script>
