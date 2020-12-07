@@ -15,7 +15,7 @@ RSpec.describe ImageSerializer do
     expect(rsp[:data][:type]).to eq("image")
 
     expect(rsp[:data][:attributes]).to be_a(Hash)
-    expect(rsp[:data][:attributes][:location]).to be_a(String)
+    expect(rsp[:data][:attributes][:location]).to be_a(Hash)
     expect(rsp[:data][:attributes][:image_url]).to be_a(String)
     expect(rsp[:data][:attributes][:dimensions]).to be_a(Hash)
     expect(rsp[:data][:attributes][:dimensions][:width]).to be_a(Numeric)
