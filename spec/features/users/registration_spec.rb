@@ -8,6 +8,7 @@ RSpec.describe 'User Registration' do
       click_link 'Register'
 
       expect(current_path).to eq(registration_path)
+      expect(page).to have_content("Why should you register? Why, to experience registering! Also, to see today's image :)")
     end
 
     it 'I can register as a user' do

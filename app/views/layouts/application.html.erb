@@ -13,17 +13,19 @@
   <body>
     <div class="container">
       <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-        <span class="w3-tag"><%= link_to 'Home', root_path %></span>
-        <span class="w3-tag"><%= link_to 'My Music', music_path %></span>
-        <span class="w3-tag"><%= link_to 'My Radio Show', '/radio' %></span>
-        <span class="w3-tag"><%= link_to 'A D&D Game I DM', '/dnd' %></span>
-        <span class="w3-tag"><%= link_to 'My Old Blog', 'http://www.somelovemusic.net/' %></span>
+        <%= link_to 'Home', root_path %>
+        <%= link_to 'My Music', music_path %>
+        <%= link_to 'My Radio Show', '/radio' %>
+        <!-- My Masters Thesis (this page should be bookish.  Maybe somehow imitate how archive.org does it?) -->
+        <!-- The movie I made in college -->
+        <%= link_to 'A D&D Game I DM', '/dnd' %>
+        <%= link_to 'My Old Blog', 'http://www.somelovemusic.net/' %>
         <% if current_user %>
-          <span class="w3-tag"><%= link_to 'Log Out', logout_path %></span>
+          <%= link_to 'Log Out', logout_path %>
           <p>Logged in as <%= link_to current_user.name, profile_path %></p>
         <% end %>
-        <span class="w3-tag"><%= link_to 'Log In', login_path unless current_user %></span>
-        <span class="w3-tag"><%= link_to 'Register', registration_path unless current_user %></span>
+        <%= link_to 'Log In', login_path unless current_user %>
+        <%= link_to 'Register', registration_path unless current_user %>
       </nav>
     </div>
     <% flash.each do |type, message| %>

@@ -7,6 +7,12 @@ RSpec.describe 'User Login and Log Out' do
         @user = User.create(name: 'Morgan', email: 'morgan@example.com', password: 'securepassword')
       end
 
+      it "can see page content" do
+        visit login_path
+        
+        expect(page).to have_content("Why should you log in? Why, to experience logging in! Also, to see today's image :)")
+      end
+
       it 'with correct credentials' do
         visit login_path
 

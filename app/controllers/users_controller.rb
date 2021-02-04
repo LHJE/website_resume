@@ -7,6 +7,9 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
+    lat_and_long = SearchFacade.find_lat_and_long("denver, co")
+    forecast = WeatherFacade.get_current_forecast(lat_and_long[:lat], lat_and_long[:lng])
+    @todays_image = ImageFacade.get_image(forecast.current_weather, lat_and_long)
   end
 
   def edit
