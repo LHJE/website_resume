@@ -1,45 +1,47 @@
+<html>
+  <body>
+    <div class="first-flex">
+      <div class="developer-name">
 
-
-<div class="first-flex">
-  <div class="developer-name">
-
-    <h1>Luke Hunter James-Erickson</h1>
-    <p>Ruby on Rails | TDD | Conflict Management</p>
-    <div class="icons">
-    <i class="fa fa-2x fa-github"><a href="https://github.com/LHJE"><%= image_tag "icons/github.png", id: "profile", style: "width:40px"%></a></i>
-    <i class="fa fa-2x fa-envelope-square"><a href="mailto:theeluke@gmail.com"><%= image_tag "icons/email.svg", id: "profile", style: "width:41px"%></a></i>
-    <i class="fa fa-2x fa-twitter"><a href="https://twitter.com/tuffluke"><%= image_tag "icons/twitter.svg", id: "profile", style: "width:40px"%></a></i>
-  </div>
-    <div>
-      <br>
-      <a href="mailto:theeluke@gmail.com">Let's Chat</a>
+        <h1>Luke Hunter James-Erickson</h1>
+        <p>Ruby on Rails | TDD | Conflict Management</p>
+        <div class="icons">
+          <i class="fa fa-2x fa-github"><a href="https://github.com/LHJE"><%= image_tag "icons/github.png", id: "profile", style: "width:40px"%></a></i>
+          <i class="fa fa-2x fa-envelope-square"><a href="mailto:theeluke@gmail.com"><%= image_tag "icons/email.svg", id: "profile", style: "width:41px"%></a></i>
+          <i class="fa fa-2x fa-twitter"><a href="https://twitter.com/tuffluke"><%= image_tag "icons/twitter.svg", id: "profile", style: "width:40px"%></a></i>
+        </div>
+        <div>
+          <br>
+          <a href="mailto:theeluke@gmail.com">Let's Chat</a>
+        </div>
+      </div>
+      <div class="profile_image">
+        <% @profile_images.each do |image|  %>
+        <div class="mySlides">
+          <%= image_tag "profile/#{image}.jpg", alt: "picture #{image}/#{@profile_images.length}", id: "profile", style: "width:300px"%>
+        </div>
+        <% end %>
+      </div>
     </div>
-  </div>
-  <div class="profile_image">
-    <% @profile_images.each do |image|  %>
-    <div class="mySlides">
-      <%= image_tag "profile/#{image}.jpg", alt: "picture #{image}/#{@profile_images.length}", id: "profile", style: "width:300px"%>
+
+    <div class="first-flex">
+      <h2>My <br /> Work</h2>
+      <div class="card">
+        <%= image_tag "projects/solar_garden.png", id: "profile", style: "width:100%"%>
+        <h3><a href="https://github.com/My-Solar-Garden">My Solar Garden</a></h3>
+      </div>
+      <div class="card">
+        <%= image_tag "projects/eras.png", id: "profile", style: "width:100%"%>
+        <h3><a href="https://github.com/Turing-Eras/api">Eras</a></h3>
+      </div>
+       <div class="card">
+         <%= image_tag "projects/sweater_weather.png", id: "profile", style: "width:100%"%>
+        <h3><a href="https://github.com/LHJE/sweater_weather">Sweater Weather</a></h3>
+      </div>
     </div>
-    <% end %>
-  </div>
-</div>
 
-<div class="first-flex">
-  <h2>My <br /> Work</h2>
-  <div class="card">
-    <%= image_tag "projects/solar_garden.png", id: "profile", style: "width:100%"%>
-    <h3><a href="https://github.com/My-Solar-Garden">My Solar Garden</a></h3>
-  </div>
-  <div class="card">
-    <%= image_tag "projects/eras.png", id: "profile", style: "width:100%"%>
-    <h3><a href="https://github.com/Turing-Eras/api">Eras</a></h3>
-  </div>
-   <div class="card">
-     <%= image_tag "projects/sweater_weather.png", id: "profile", style: "width:100%"%>
-    <h3><a href="https://github.com/LHJE/sweater_weather">Sweater Weather</a></h3>
-  </div>
-</div>
-
+  </body>
+</html>
 
 <script>
 // Automatic Slideshow - change image every 6 seconds
