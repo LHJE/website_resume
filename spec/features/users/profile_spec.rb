@@ -13,6 +13,7 @@ RSpec.describe "User Profile Path" do
 
       expect(page).to have_content(@user.name)
       expect(page).to have_content(@user.email)
+      expect(page).to have_content("Here is today's image, based on Denver's location, and the current weather:")
       expect(page).to_not have_content(@user.password)
       expect(page).to have_link('Edit')
     end
